@@ -1,0 +1,45 @@
+
+.sidebar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   margin-right: 5px;
+   background: #8887a7;
+   padding: 3px 1rem;
+   margin-bottom: 4rem;
+   z-index: 100;
+   
+}
+.column{
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top:0;
+}
+.row{
+   flex-direction: row;
+}
+.cross{
+    position: absolute;
+    color: red;
+    right: 1rem;
+    top:1rem;
+    cursor: pointer;
+}
+.hamburger{
+    color: black;
+    background: white;
+    border: none;
+    font-size:1.2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (width>=499px) {
+    .sidebar{
+        display: none;
+    }
+}

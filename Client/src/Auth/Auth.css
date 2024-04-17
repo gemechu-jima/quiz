@@ -1,0 +1,55 @@
+.auth{
+    width: auto;
+    background: rgb(141, 209, 209);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 1px 1p 5px 5px rgb(200, 168, 231);
+    text-align: center;
+}
+.form-auth{
+   width: 20rem;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    background: rgb(141, 209, 209);
+    color: black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 5px;
+    input{
+        border: none;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 4px;
+        background: rgb(250, 252, 252);
+        
+    }
+    input:focus{
+        outline:solid 1px rgba(10, 6, 250, 0.699);
+        border-color: blue;
+        padding: 0.8rem 0;
+        transition: 3se linear;
+    }
+    input::placeholder{
+        color:rgb(114, 107, 107);
+        text-align: center;
+    }
+}
+.btn-login{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background: gray;
+    border-radius: 5px;
+    padding: 5px 0;
+    cursor:pointer;
+     margin-bottom: 5px;
+    button{
+        background: inherit;
+        color: antiquewhite;
+        border: none;
+        cursor:pointer;
+
+    }
+}

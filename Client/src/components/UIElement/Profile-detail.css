@@ -1,0 +1,18 @@
+.profile-detail{
+    position: relative;
+    top:3rem;
+    display: flex;
+    width: 60rem;
+    margin: auto;
+}
+
+table{
+    width: 40rem;
+    border: 2px solid rgb(23, 33, 123);
+}
+th, td{
+    border-bottom: 1px solid rgb(233, 234, 240);
+    border-left: 1px solid rgb(233, 234, 240);
+    align-items: center;
+    padding: 8px;
+}
