@@ -9,7 +9,7 @@
     "start-app": "npm install && cd client && npm install && npm run build",
     "server": "cd backend && npm install && npm start",
     "dev": " concurrently \"npm start\" \"npm run server\"",
-    "setup-app": "concurrently  \"npm run start-app\" \"npm run server\""
+    "setup-app": "node_modules/.bin/concurrently \"npm run start-app\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
