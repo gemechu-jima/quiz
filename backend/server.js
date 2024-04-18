@@ -42,7 +42,7 @@ app.use((req, res, next) => {
     "/upload",
     express.static(path.join(__dirname, "upload"))
   );
-  app.use(express.static(path.resolve(__dirname, "./Client/build")))
+  app.use(express.static(path.resolve(__dirname, "../Client/build")))
 app.use("/quiz",routerReact)
 app.use("/user", routerUser)
 
