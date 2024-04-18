@@ -42,13 +42,13 @@ app.use((req, res, next) => {
     "/upload",
     express.static(path.join(__dirname, "upload"))
   );
-  app.use(express.static(path.resolve(__dirname, "public/build")))
+  app.use(express.static(path.resolve(__dirname, "../client/build")))
 app.use("/quiz",routerReact)
 app.use("/user", routerUser)
 
 
 app.get("*", (req, res)=>{
-  res.sendFile(path.resolve(__dirname, "./public/build", "index.html"))
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"))
 })
 app.use("*", ( req, res)=>{
   res.status(404).json({ message: "Not Found" });
@@ -67,9 +67,3 @@ app.listen(port, ()=>{
     console.log(`Server is running on ${port}`)
 })
 
-/*
-NODE_ENV=development
-PORT=4000
-JWT_SECRET=user1234
-MONGO_URL='mongodb+srv://mern_user:mern123@cluster0.fqkezrb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-*/ 
