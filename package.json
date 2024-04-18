@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd client && npm start",
-    "start-app": "cd client && npm run build",
-    "server": "cd backend && npm start",
-    "dev": "npm-run-all --parallel start server",
-    "setup-app": "npm-run-all --parallel start-app server"
+    "start": "cd client && npm install && npm start",
+    "start-app": "npm i && cd client && npm i && npm run build",
+    "server": "npm i cd backend && npm i && npm start",
+    "dev": " concurrently \"npm start\" \"npm run server\""
+    
 },
   "keywords": [],
   "author": "",
