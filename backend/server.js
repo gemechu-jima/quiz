@@ -67,3 +67,9 @@ app.listen(port, ()=>{
     console.log(`Server is running on ${port}`)
 })
 
+/*
+NODE_ENV=development
+PORT=4000
+JWT_SECRET=user1234
+MONGO_URL='mongodb+srv://mern_user:mern123@cluster0.fqkezrb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+*/ 
