@@ -16,7 +16,7 @@ export default function Navigation() {
         <div className="search">
           {imageProfile && (
             <NavLink className="userProfile" to="/profile-detail" >
-              <img src={`http://localhost:3000/${imageProfile}`} alt=".." />
+              <img src={`https://quiz-c183.onrender.com/${imageProfile}`} alt=".." />
               <span style={{color:"blue"}}>{user.name && user.name.slice(0, 7).toUpperCase()}</span>
             </NavLink>
           )}

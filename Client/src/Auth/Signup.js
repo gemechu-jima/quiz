@@ -21,7 +21,7 @@ export default function Signup() {
     
     try {
       if (isLogin) {
-        const response = await axios.post(`http://localhost:3000/user/login`, {
+        const response = await axios.post(`https://quiz-c183.onrender.com/user/login`, {
           email,
           password,
         });
@@ -45,7 +45,7 @@ export default function Signup() {
         formData.append("password", password);
         formData.append("image", image);
 
-        const response = await axios.post(`http://localhost:3000/user/signup`, 
+        const response = await axios.post(`https://quiz-c183.onrender.com/user/signup`, 
         formData,
          {
          headers:{"Content-Type":"multipart/form-data"}
