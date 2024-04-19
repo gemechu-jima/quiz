@@ -125,13 +125,13 @@ export default function Signup() {
               />
             </div>
           )}
-          <div className="btn-login">
-            <button onClick={handleOnSubmit}> {isLogin ? "Login" : " Sign up"}</button>
+          <div className="btn-login" onClick={handleOnSubmit}>
+            <button > {isLogin ? "Login" : " Sign up"}</button>
           </div>
         </>
       </form>
-      <div className="btn-login">
-        <button onClick={() => setIsLogin(!isLogin)}>
+      <div className="btn-login" onClick={() => setIsLogin(!isLogin)}>
+        <button >
           {isLogin ? "Sign Up" : " Login"}
         </button>
       </div>

@@ -8,16 +8,16 @@ export default function NavLinks(props) {
             <NavLink to="/">Home</NavLink>
         </li>
         <li onClick={props.handleSidebar}>
-            <NavLink to="/podcast">Quiz</NavLink>
+            <NavLink to="/quiz">Quiz</NavLink>
         </li>
         <li onClick={props.handleSidebar}>
             <NavLink to="/blog">Blog</NavLink>
         </li>
         <li onClick={props.handleSidebar}>
-            <NavLink to="/about-us">About</NavLink>
+            <NavLink to="/about">About</NavLink>
         </li>
         <li onClick={props.handleSidebar}>
-            <NavLink to="/contact-us">Contact US</NavLink>
+            <NavLink to="/contact">Contact US</NavLink>
         </li>
     </ul>
   )

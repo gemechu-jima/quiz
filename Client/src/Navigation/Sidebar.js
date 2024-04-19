@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <div className={`sidebar ${openSidebar ? "column" : "row"}`}>
       {openSidebar && <Backdrop handleSidebar={handleSidebar}/>}
-      <h2>Blog</h2>
+      <h1 >Quiz</h1>
       {openSidebar && (
         <>
           <NavLinks  handleSidebar={handleSidebar} />

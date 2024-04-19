@@ -11,7 +11,7 @@ export default function Navigation() {
   return (
     <div className="navigation">
       <div className="nav">
-        <h2>Blog</h2>
+        <h1>Quiz</h1>
         <NavLinks />
         <div className="search">
           {imageProfile && (
