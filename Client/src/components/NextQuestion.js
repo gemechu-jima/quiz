@@ -6,7 +6,7 @@ function NextQuestion({dispatch, answer ,NumberQuestion, index, selected, points
     const {user, token}=useContext(useGlobalContext)
    
     const handlePointSubmission=async(points, maxPossible)=>{
-       const response= await axios.post("http://localhost:4000/quiz/score", 
+       const response= await axios.post("http://localhost:3000/quiz/score", 
        {points:(points/maxPossible)*100, email:user.email, course:selected},
        {
          headers:{Authorization:`Bearer ${token}`},

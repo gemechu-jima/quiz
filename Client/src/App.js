@@ -77,7 +77,7 @@ function App() {
 
   const NumberQuestion = questions.length;
   useEffect(() => {
-    fetch(`http://localhost:4000/quiz/${selected}`, 
+    fetch(`http://localhost:3000/quiz/${selected}`, 
     {method:"GET", 
     headers:{Authorization:"Bearer "+ token}
   })
