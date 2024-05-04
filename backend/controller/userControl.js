@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 import { userModel } from "../model/userModel.js"
 const signup = async (req, res) => {
     const { name, email, password } = req.body;
-    
+    console.log(req.body)
 
     try {
         const existUser = await userModel.findOne({ email });

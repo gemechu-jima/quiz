@@ -1,0 +1,75 @@
+
+.form-info{
+display: flex;
+justify-content: center;
+height: 70vh;
+
+}
+.form-info p{
+    text-align: start;
+}
+@media (width<=499px) {
+    .form-info{
+        height: auto;
+        flex-direction: column;
+    }
+}
+.info{
+    margin: 1rem;
+
+}
+.info div{
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    color: gray;
+    font-weight: 800;
+}
+.form-info form{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ padding: 1rem;
+ border-radius: 10px;
+ box-shadow: 1px 1px 5px 4px whitesmoke;
+ margin: 2rem 1rem;
+
+ box-sizing: content-box;
+}
+ .form-control{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+ }
+ @media (width<=499px) {
+    .form-control{
+        flex-direction: column;
+    }
+ }
+ .form-control input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(170, 50, 220, .6);
+    box-sizing: border-box;
+ }
+ .form-control input:focus{
+    outline: 1px ridge rgba(170, 50, 220, .6);
+    border-radius: 1.5rem;
+ }
+ .form-control textarea:focus{
+    outline: 1px solid rgba(170, 50, 220, .6);
+    border-radius: 1rem;
+ }
+ .form-control input[type=text] input[type=email]{
+    width: 50%;
+    padding: 1rem ;
+    border-radius: 5px;
+    border: 1px solid gray;
+ }
+ .form-control textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+ }

@@ -25,6 +25,7 @@ const getJavascriptQuestion=async(req, res)=>{
 const createScore=async(req, res)=>{
     const {points, email, course}=req.body
     let existUser
+    console.log(req.body)
     try {
         existUser=await scoreModel.findOne({email})
         if(!existUser){
@@ -49,7 +50,7 @@ const createScore=async(req, res)=>{
    
 }
 const getScore=async(req, res)=>{
-    const { email}=req.params
+    const {email}=req.params
     let userScore
     try {
          userScore=await scoreModel.findOne({email})

@@ -12,8 +12,9 @@ import App from './App';
 // import BankStatement from './BankStatement';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GlobalContext>
+  
     <BrowserRouter>
+    <GlobalContext>
     <MainHeader/>
     <Routes>
      <Route path='/' element={<App/>}/>
@@ -22,7 +23,8 @@ root.render(
      <Route path='contact' element={<Contact/>}/>
      <Route path='quiz' element={<Quiz/>}/>
     </Routes>
+    </GlobalContext>
     </BrowserRouter>
-  </GlobalContext>
+  
   
 );

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useReducer, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { baseURL, baseURL1 } from "./helper/baseURL";
 import Loader from "./utils/loader";
 import Error from "./utils/Error";
 import Auth from "./Auth/Signup"
@@ -77,7 +78,7 @@ function App() {
 
   const NumberQuestion = questions.length;
   useEffect(() => {
-    fetch(`https://quiz-c183.onrender.com/quiz/${selected}`, 
+    fetch(`${baseURL}/quiz/${selected}`, 
     {method:"GET", 
     headers:{Authorization:"Bearer "+ token}
   })

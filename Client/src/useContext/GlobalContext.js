@@ -1,5 +1,5 @@
 import { createContext, useCallback, useEffect, useState } from "react";
-
+import {useNavigate } from "react-router-dom"
 export const useGlobalContext = createContext();
 
 let logoutTimer;
@@ -10,6 +10,7 @@ export default function GlobalContext({ children }) {
 
   const [token, setToken] = useState();
   const [tokenExpiredTime, setTokenExpiredTime] = useState();
+  const navigate=useNavigate()
   const Login = useCallback((user, token, expiredToken) => {
     setUser(user);
     setToken(token);
@@ -30,6 +31,7 @@ export default function GlobalContext({ children }) {
     setToken("");
     setTokenExpiredTime("");
     localStorage.removeItem("user", "");
+    navigate("/")
   }, []);
   const changeSelectOption = (ev) => {
     setSelected(ev.target.value);

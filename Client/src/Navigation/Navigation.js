@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import NavLinks from "./NavLinks";
-import { NavLink } from "react-router-dom";
+import { NavLink ,Link} from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { useGlobalContext } from "../useContext/GlobalContext";
 import "./Navigation.css";
@@ -11,7 +11,7 @@ export default function Navigation() {
   return (
     <div className="navigation">
       <div className="nav">
-        <h1>Quiz</h1>
+        <h1><Link to="/">Quiz</Link></h1>
         <NavLinks />
         <div className="search">
           {imageProfile && (

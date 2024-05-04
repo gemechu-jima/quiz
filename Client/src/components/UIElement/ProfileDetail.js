@@ -1,14 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Profile-detail.css";
 import { useGlobalContext } from "../../useContext/GlobalContext";
+import { baseURL } from "../../helper/baseURL";
 export default function ProfileDetail() {
   const { user, token } = useContext(useGlobalContext);
   const [points, setPoints] = useState();
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:4000/quiz/score/${user?.email}`,
-        { headers: { Authorization: "Bearer " + token } }
+        `${baseURL}/quiz/score/${user?.email}`,
+        { headers: { Authorization: "Bearer "+token } }
       );
       const data = await response.json();
 

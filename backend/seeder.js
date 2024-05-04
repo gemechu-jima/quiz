@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import connect from "./db/config.js";
 import {reactQuiz} from "./model/reactModel.js";
 import {javascriptQuiz } from "./model/javascriptModel.js";
-import {reactQuestions as data} from "./data/questions.js" ;
+import {reactQuestions } from "./data/questions.js" ;
 import {javascriptQuestions} from "./data/javascript.js" ;
 
 
@@ -11,7 +11,7 @@ connect();
 
 const importDataReact = async () => {
     try {
-        await reactQuiz.insertMany(data);
+        await reactQuiz.insertMany(reactQuestions);
         console.log("Data entered into DB react js");
         process.exit();
     } catch (error) {
@@ -55,6 +55,6 @@ if (process.argv[2] === "-d") {
     importDataJavascript()
 }else if(process.argv[2] === "-js"){
     destroyDataJavascript()
-}else{
+}else if(process.argv[2] === "r"){
     importDataReact();
 }

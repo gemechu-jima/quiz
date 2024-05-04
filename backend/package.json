@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "data:react": "node seeder",
+    "data:react": "node seeder r",
     "data:js": "node seeder js",
     "data:delete-js": "node seeder -js",
     "data:destroy": "node seeder -d"

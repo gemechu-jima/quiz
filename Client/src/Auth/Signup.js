@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useGlobalContext } from "../useContext/GlobalContext";
+import { baseURL, baseURL1 } from "../helper/baseURL";
 import axios from "axios";
 import ImageUpload from "../headers/ImageUpload";
 import "./Auth.css";
@@ -21,7 +22,7 @@ export default function Signup() {
     
     try {
       if (isLogin) {
-        const response = await axios.post(`https://quiz-c183.onrender.com/user/login`, {
+        const response = await axios.post(`${baseURL}/user/login`, {
           email,
           password,
         });
@@ -45,7 +46,7 @@ export default function Signup() {
         formData.append("password", password);
         formData.append("image", image);
 
-        const response = await axios.post(`https://quiz-c183.onrender.com/user/signup`, 
+        const response = await axios.post(`${baseURL}/user/signup`, 
         formData,
          {
          headers:{"Content-Type":"multipart/form-data"}

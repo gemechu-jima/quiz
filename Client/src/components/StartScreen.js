@@ -21,7 +21,7 @@ function StartScreen({question, dispatch}) {
             </select>
           </div>
          </form>
-        <button className="btn btn-ui" onClick={()=>dispatch({type:'start'})}>Let's Start</button>
+        <button className="button btn-ui" onClick={()=>dispatch({type:'start'})}>Let's Start</button>
     </div>
   )
 }

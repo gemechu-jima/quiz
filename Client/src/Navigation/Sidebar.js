@@ -6,7 +6,7 @@ import "./Sidebar.css";
 import NavLinks from "./NavLinks";
 import Backdrop from "./Backdrop";
 import Auth from "../Auth/Signup"
-import { NavLink } from "react-router-dom";
+import { NavLink ,Link} from "react-router-dom";
 export default function Sidebar() {
   const [openSidebar, setOpensSidebar] = useState(false);
   const handleSidebar=()=>{
@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <div className={`sidebar ${openSidebar ? "column" : "row"}`}>
       {openSidebar && <Backdrop handleSidebar={handleSidebar}/>}
-      <h1 >Quiz</h1>
+      <h1><Link to="/">Quiz</Link></h1>
       {openSidebar && (
         <>
           <NavLinks  handleSidebar={handleSidebar} />
