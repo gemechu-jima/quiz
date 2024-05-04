@@ -23,22 +23,22 @@ const signup = async (req, res) => {
         if (error.name === "ValidationError") {
             return res.status(403).json({ error: error.message });
         }
-        res.status(500).json({ error: "An unexpected error occurred. Please try again later.", err:error.message });
+        res.status(500).json({ error: "An unexpected error occurred. Please try again later.", err:error });
     }
 };
 
-const login = async (req, res, next) => {
+const login = async (req, res) => {
    const { email, password } = req.body;
 
    try {
        const existUser = await userModel.findOne({ email });
-
+      
        if (!existUser) {
            return res.status(404).json({ msg: "This user doesn't exist. Please sign up." });
        }
 
        const isPasswordMatch = await bcrypt.compare(password, existUser.password);
-
+     console.log(isPasswordMatch)
        if (isPasswordMatch) {
         let token=jwt.sign({email:existUser.email, UserId:existUser._id}, process.env.JWT_SECRET, {expiresIn:"1d"})
            existUser.password=undefined;
@@ -48,7 +48,7 @@ const login = async (req, res, next) => {
        }
    } catch (error) {
        console.error("Error occurred during login:", error);
-       return res.status(500).json({ error: "An unexpected error occurred. Please try again later." });
+       return res.status(500).json({ error: "An unexpected error occurred. Please try again later.", error });
    }
 }
 export {signup, login}
