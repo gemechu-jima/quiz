@@ -32,7 +32,7 @@ const login = async (req, res) => {
 
    try {
        const existUser = await userModel.findOne({ email });
-      
+       console.log(existUser)
        if (!existUser) {
            return res.status(404).json({ msg: "This user doesn't exist. Please sign up." });
        }

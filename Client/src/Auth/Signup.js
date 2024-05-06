@@ -60,15 +60,13 @@ export default function Signup() {
     } catch (error) {
       console.error("Error:", error);
       if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
+        
         console.error("Server responded with error status:", error.response.status);
         console.error("Error response data:", error.response.data);
       } else if (error.request) {
-        // The request was made but no response was received
+        
         console.error("No response received from server. Request made:", error.request);
       } else {
-        // Something happened in setting up the request that triggered an Error
         console.error("Error setting up request:", error.message);
       }
     }
@@ -84,7 +82,7 @@ export default function Signup() {
   }, [image]);
   return (
     <div className="auth">
-      <form  className="form-auth"  >
+      <form  className="form-auth"  onSubmit={handleOnSubmit}>
         {!isLogin && (
           <>
             {!image && <input type="file" onChange={handleImage}/>}
@@ -126,7 +124,7 @@ export default function Signup() {
               />
             </div>
           )}
-          <div className="btn-login" onClick={handleOnSubmit}>
+          <div className="btn-login" >
             <button > {isLogin ? "Login" : " Sign up"}</button>
           </div>
         </>
