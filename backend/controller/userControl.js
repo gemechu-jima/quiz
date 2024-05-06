@@ -38,7 +38,6 @@ const login = async (req, res) => {
        }
 
        const isPasswordMatch = await bcrypt.compare(password, existUser.password);
-     console.log(isPasswordMatch)
        if (isPasswordMatch) {
         let token=jwt.sign({email:existUser.email, UserId:existUser._id}, process.env.JWT_SECRET, {expiresIn:"1d"})
            existUser.password=undefined;
